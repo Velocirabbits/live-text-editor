@@ -140,6 +140,7 @@ class EditorContainer extends Component {
     return (
       <div>
         <h1>Current Room: {this.state.room}</h1>
+        <hr/>
         <button value='project1' onClick={(e) => this.joinRoom(e)}>Project1</button>
         <button value='Project2' onClick={(e) => this.joinRoom(e)}>Project2</button>
         <button onClick={(e) => this.leaveRoom(e)}>Leave Project</button>
@@ -153,10 +154,9 @@ class EditorContainer extends Component {
         />
         <div>
           <h1>Options</h1>
+          <hr/>
         </div>
         <div>
-          <button onClick={(e) => this.loadProject(e)}>Load</button>
-          <button onClick={(e) => this.saveProject(e)}>Save Project</button>
           <button onClick={(e) => this.addProject(e)}>Add</button>
           <button onClick={(e) => this.deleteProject(e)}>Delete</button>
         </div>
