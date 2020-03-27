@@ -55,14 +55,6 @@ class EditorContainer extends Component {
         this.setState({ user_id : json.user_id })
       })
 
-      fetch(`/getAllProjects?username=${this.props.username}`, {
-        method: 'GET'
-      })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json);
-        this.setState({ roomOptionsOther : json })
-      })
   }
 
   /* Join or leave room */
@@ -182,8 +174,8 @@ class EditorContainer extends Component {
     return (
       <div>
         <h1>Current Room: {this.state.room}</h1>
+        <hr/>
         <span>{this.props.username}'s Existing Projects: </span>{projectButtons}
-        <span>Join Other People's Projects: </span>{otherProjectButtons}
         <br/>
         <button onClick={(e) => this.leaveRoom(e)}>Leave: {this.state.room}</button>
         <button onClick={(e) => this.saveProject(e)}>Save: {this.state.room}
